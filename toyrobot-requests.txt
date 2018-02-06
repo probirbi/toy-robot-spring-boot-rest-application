@@ -1,0 +1,58 @@
+Example 1:
+
+PLACE 0,0,NORTH: 
+http://localhost:8080/place?x=0&y=0&f=NORTH
+MOVE
+: http://localhost:8080/move
+
+REPORT: 
+http://localhost:8080/report
+Output: 0,1,NORTH
+
+
+
+Example 2:
+
+PLACE 0,0,NORTH: 
+http://localhost:8080/place?x=0&y=0&f=NORTH
+
+LEFT
+: http://localhost:8080/left
+
+REPORT: 
+http://localhost:8080/report
+
+Output: 0,0,WEST
+
+
+
+Example 3:
+
+PLACE 1,2,EAST: 
+http://localhost:8080/place?x=1&y=2&f=EAST
+
+MOVE
+: http://localhost:8080/move
+
+MOVE
+: http://localhost:8080/move
+
+LEFT
+: http://localhost:8080/left
+
+MOVE
+: http://localhost:8080/move
+
+REPORT
+: http://localhost:8080/report
+
+Output: 3,3,NORTH
+
+
+
+MOVE
+: http://localhost:8080/move
+
+REPORT
+: http://localhost:8080/report
+Output: ROBOT MISSING
